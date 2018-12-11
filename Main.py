@@ -33,8 +33,6 @@ class UREngine:
         #   IBM X FORCE PART
         # --------------------
         if args.ip != None and args.ip != 1 and args.ibm == 1:
-            # print('Iam in Single IPAddress')
-            # print('IP Address : ' + args.ip)
             ipcheck = IBMXForce.IPCheck(API_KEY=Config.properties('IBM', '', 'api_key'),
                                                 API_PASSWORD=Config.properties('IBM', '', 'api_pass'),
                                                 api=Config.properties('IBM', '', 'ip_api'), mode='Single',
@@ -47,8 +45,6 @@ class UREngine:
             print('CATEGORY : ' + str(category))
 
         if args.ip == 1 and args.ibm == 1 and args.csv != None and args.csv != 1:
-            # print('Iam in Multiple IPAddress')
-            # print('IP Address file : ' + args.csv)
             ipcheck = IBMXForce.IPCheck(API_KEY=Config.properties('IBM', '', 'api_key'),
                               API_PASSWORD=Config.properties('IBM', '', 'api_pass'),
                               api=Config.properties('IBM', '', 'ip_api'), mode='Multiple',
@@ -71,8 +67,6 @@ class UREngine:
             print('CATEGORY : '+str(category))
 
         if args.domain == 1 and args.ibm == 1 and args.csv != None and args.csv != 1:
-            # print('Iam in Multiple Domain')
-            # print('Domain file : ' + args.csv)
             domaincheck = IBMXForce.DomainCheck(API_KEY=Config.properties('IBM', '', 'api_key'),
                                       API_PASSWORD=Config.properties('IBM', '', 'api_pass'),
                                       api=Config.properties('IBM', '', 'url_api'), mode='Multiple',
@@ -81,8 +75,6 @@ class UREngine:
             print(domaincheck.check_domain())
 
         if args.url != None and args.url != 1 and args.ibm == 1:
-            # print('I am in Single url')
-            # print('Url : ' + args.url)
             urlcheck = IBMXForce.UrlCheck(API_KEY=Config.properties('IBM', '', 'api_key'),
                                 API_PASSWORD=Config.properties('IBM', '', 'api_pass'),
                                 api=Config.properties('IBM', '', 'url_api'), mode='Single',
@@ -96,8 +88,6 @@ class UREngine:
 
 
         if args.url == 1 and args.ibm == 1 and args.csv != None and args.csv != 1:
-            # print('I am in Multiple Url')
-            # print('Url file : ' + args.csv)
             urlcheck = IBMXForce.UrlCheck(API_KEY=Config.properties('IBM', '', 'api_key'),
                                           API_PASSWORD=Config.properties('IBM', '', 'api_pass'),
                                           api=Config.properties('IBM', '', 'url_api'), mode='Multiple',
@@ -106,8 +96,6 @@ class UREngine:
             print(urlcheck.check_url())
 
         if args.hash != None and args.hash != 1 and args.ibm == 1:
-            # print('I am in Single Hash check')
-            # print('Hash : ' + args.hash)
             hash_check = IBMXForce.HashCheck(API_KEY=Config.properties('IBM', '', 'api_key'),
                                    API_PASSWORD=Config.properties('IBM', '', 'api_pass'),
                                    api=Config.properties('IBM', '', 'hash_api'), mode='Single',
@@ -131,8 +119,6 @@ class UREngine:
         #   IPVOID PART
         # -------------------
         if args.ip != None and args.ip != 1 and args.ipvoid == 1:
-            # print('I am in IPVoid Single IP Address')
-            # print('IP Address : ' + args.ip)
             ipch = IPVoid.IPCheck(mode='Single', http_url=Config.properties('IPVoid', '', 'url'), ip=args.ip)
             ip, score, country, city = ipch.check_ip()
             print('******** IPVOID IP REPUTATION RESULTS ***********')
@@ -142,8 +128,6 @@ class UREngine:
             print('CITY : '+city)
 
         if args.ip == 1 and args.ipvoid == 1 and args.csv != None and args.csv != 1:
-            # print('I am in IPVoid Multiple IP Address')
-            # print('IP Address file : ' + args.csv)
             ipch = IPVoid.IPCheck(mode='Multiple', http_url=Config.properties('IPVoid', '', 'url'),
                            ipfile=args.csv)
             print('PROCESSING REQUEST ......................!')
@@ -153,8 +137,6 @@ class UREngine:
         #   VIRUS TOTAL PART
         # ---------------------
         if args.url != None and args.url != 1 and args.virustotal == 1:
-            # print('I am in Virus Total Single Url Check')
-            # print('Url : ' + args.url)
             uc = VirusTotal.UrlCheck(API_KEY=Config.properties('VirusTotal', '', 'api_key'),
                          api=Config.properties('VirusTotal', '', 'url_api'), mode='Single',
                          url=args.url)
@@ -167,8 +149,6 @@ class UREngine:
             print('BLACKLISTED BY : '+str(blacklist_by))
 
         if args.url == 1 and args.virustotal == 1 and args.csv != None and args.csv != 1:
-            # print('I am in Virus Total Multiple Url Check')
-            # print('Url file : ' + args.csv)
             uc = VirusTotal.UrlCheck(API_KEY=Config.properties('VirusTotal', '', 'api_key'),
                                      api=Config.properties('VirusTotal', '', 'url_api'), mode='Multiple',
                                      urlfile=args.csv)
@@ -176,8 +156,6 @@ class UREngine:
             print(uc.check_url())
 
         if args.hash != None and args.hash != 1 and args.virustotal == 1:
-            # print('I am in Virus Total Single hash check')
-            # print('Hash : ' + args.hash)
             hc = VirusTotal.HashCheck(API_KEY=Config.properties('VirusTotal', '', 'api_key'), api=Config.properties('VirusTotal', '', 'hash_api'), mode='Single', hash=args.hash)
             scan_id, score, md5, sha256, sha1, permalink, blacklisted_by = hc.check_hash()
             print('********** VIRUS TOTAL HASH CHECK RESULTS **************')
@@ -191,8 +169,6 @@ class UREngine:
 
 
         if args.hash == 1 and args.virustotal == 1 and args.csv != None and args.csv != 1:
-            # print('I am in Virus Total Multiple hash check')
-            # print('Hash file : ' + args.csv)
             hc = VirusTotal.HashCheck(API_KEY=Config.properties('VirusTotal', '', 'api_key'),
                                       api=Config.properties('VirusTotal', '', 'hash_api'), mode='Multiple',
                                       hashfile=args.csv)
@@ -200,8 +176,6 @@ class UREngine:
             print(hc.check_hash())
 
         if args.filescan != None and args.filescan != 1 and args.virustotal == 1:
-            # print('I am in Virus Total Single File Scan')
-            # print('FileScan : ' + args.filescan)
             hc = VirusTotal.FileHash(API_KEY=Config.properties('VirusTotal', '', 'api_key'),
                           api_list=[Config.properties('VirusTotal', '', 'filescan_api'),
                                     Config.properties('VirusTotal', '', 'hash_api')], mode='Single',
@@ -217,8 +191,6 @@ class UREngine:
             print('BLACKLISTED BY : ' + str(blacklisted_by))
 
         if args.filescan == 1 and args.virustotal == 1 and args.csv != None and args.csv != 1:
-            # print('I am in Virus Total Multiple File Scans')
-            # print('File Scan file : ' + args.csv)
             hc = VirusTotal.FileHash(API_KEY=Config.properties('VirusTotal', '', 'api_key'),
                           api_list=[Config.properties('VirusTotal', '', 'filescan_api'),
                                     Config.properties('VirusTotal', '', 'hash_api')], mode='Multiple',
@@ -271,8 +243,6 @@ class UREngine:
             print('VOLUME CHANGE : ' + str(vol_change))
 
         if args.domain == 1 and args.talos == 1 and args.csv != None and args.csv != 1:
-            # print('I am in Talos Multiple Domain Check')
-            # print('Domain file: ' + args.csv)
             domain_check = CiscoTalos.DomainCheck(driver_path=Config.properties('Talos', '', 'selenium_driver'),
                                                   http_path=Config.properties('Talos', '', 'url'),
                                                   mode='Multiple',
@@ -281,8 +251,6 @@ class UREngine:
             print(domain_check.check_domain())
 
         if args.url != None and args.url != 1 and args.talos == 1:
-            # print('I am in Talos Single Url Check')
-            # print('Url : ' + args.url)
             url_check = CiscoTalos.UrlCheck(driver_path=Config.properties('Talos', '', 'selenium_driver'), http_path=Config.properties('Talos', '', 'url'), mode='Single', url=args.url)
             ip, host, domain, ctry, city, email_rep, web_rep, wght_rep, spam_level, email_volume, vol_change = url_check.check_url()
             print('*********** CISOC TALOS URL REPUTATION CHECK RESULTS ***********')
@@ -299,8 +267,6 @@ class UREngine:
             print('VOLUME CHANGE : ' + str(vol_change))
 
         if args.url == 1 and args.talos == 1 and args.csv != None and args.csv != 1:
-            # print('I am in Talos Multiple Url Check')
-            # print('Url file : ' + args.csv)
             url_check = CiscoTalos.UrlCheck(driver_path=Config.properties('Talos', '', 'selenium_driver'), http_path=Config.properties('Talos', '', 'url'), mode='Multiple', urlfile=args.csv)
             print('PROCESSING REQUEST .................!')
             print(url_check.check_url())
@@ -367,7 +333,6 @@ class UREngine:
             print('   LONGITUDE : '+iploc_list[6])
 
         if args.domain not in [None, 1] and args.all == 1:
-            print('I am in domain check all')
             dom_check = All_Sites.DomainCheck(IBM_API_KEY=Config.properties('IBM', '', 'api_key'), IBM_API_PASSWORD=Config.properties('IBM', '', 'api_pass'), ibm_api=Config.properties('IBM', '', 'url_api'), talos_path=Config.properties('Talos', '', 'url'), domain=args.domain)
             ibm_list, talos_list = dom_check.check_domain()
             print('********* IBM X FORCE *************')
@@ -389,7 +354,6 @@ class UREngine:
             print('   VOLUME CHANGE : ' + str(talos_list[10]))
 
         if args.url not in [None, 1] and args.all == 1:
-            print('I am in url check all')
             url_check = All_Sites.UrlCheck(IBM_API_KEY=Config.properties('IBM', '', 'api_key'), IBM_API_PASSWORD=Config.properties('IBM', '', 'api_pass'), VIRUSTOTAL_API=Config.properties('VirusTotal', '', 'api_key'), ibm_api=Config.properties('IBM', '', 'url_api'), virustotal_api=Config.properties('VirusTotal', '', 'url_api'), talos_path=Config.properties('Talos', '', 'url'), url=args.url)
             ibm_list, virus_total_list, talos_list = url_check.check_url()
             print('********* IBM X FORCE *************')
@@ -417,7 +381,6 @@ class UREngine:
             print('   VOLUME CHANGE : ' + str(talos_list[10]))
 
         if args.hash not in [None, 1] and args.all == 1:
-            print('I am in hash check all')
             hash_chk = All_Sites.HashCheck(IBM_API_KEY=Config.properties('IBM', '', 'api_key'), IBM_API_PASSWORD=Config.properties('IBM', '', 'api_pass'), VIRUSTOTAL_API=Config.properties('VirusTotal', '', 'api_key'), ibm_api=Config.properties('IBM', '', 'hash_api'), virustotal_api=Config.properties('VirusTotal', '', 'hash_api'), hash=args.hash)
             ibm_list, virus_total_list = hash_chk.check_hash()
             print('********* IBM X FORCE *************')
@@ -435,7 +398,6 @@ class UREngine:
             print('   BLACKLISTED BY : ' + str(virus_total_list[6]))
 
         if args.filescan not in [None, 1] and args.all == 1:
-            print('I am in filescan all')
             vfs = All_Sites.FileScan(VIRUSTOTAL_API_KEY=Config.properties('VirusTotal', '', 'api_key'), virustotal_api=[Config.properties('VirusTotal', '', 'filescan_api'), Config.properties('VirusTotal', '', 'hash_api')], filescan=args.filescan)
             virus_total_list = vfs.check_filescan()
             print('********** VIRUS TOTAL FILE SCAN RESULTS **************')
