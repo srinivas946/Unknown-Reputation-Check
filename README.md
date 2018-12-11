@@ -20,3 +20,39 @@ Take an overview of commands available for this tool<br/>
 **-location** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Check the location of the IPAddress<br/>
 **-view** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;	Choose a view in google maps where exact the location of IPAddress<br/>
 **-all** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; Check the Reputation of IPAddress, Domain, Url and Hash from all the websites<br/>
+
+### Examples:
+**IPAddress Reputation Check**<br/>
+- python &nbsp; Main.py &nbsp; --ip &nbsp; xx.xx.xx.xx(_IPAddress_)&nbsp;  -ibm<br/>
+- python &nbsp; Main.py &nbsp; --ip &nbsp; xx.xx.xx.xx(_IPAddress_)&nbsp;  -ibm &nbsp;  -csv&nbsp; _csvfilepath_ <br/>
+- python &nbsp; Main.py &nbsp; --ip &nbsp; xx.xx.xx.xx(_IPAddress_)&nbsp;  -ipvoid<br/>
+- python &nbsp; Main.py &nbsp; --ip &nbsp; xx.xx.xx.xx(_IPAddress_)&nbsp;  -ipvoid &nbsp; -csv&nbsp; _csvfilepath_<br/>
+- python &nbsp; Main.py &nbsp; --ip &nbsp; xx.xx.xx.xx(_IPAddress_)&nbsp;  -talos<br/>
+- python &nbsp; Main.py &nbsp; --ip &nbsp; xx.xx.xx.xx(_IPAddress_)&nbsp;  -talos &nbsp; -csv&nbsp; _csvfilepath_<br/>
+- python &nbsp; Main.py &nbsp; --ip &nbsp; xx.xx.xx.xx(_IPAddress_)&nbsp;  -location<br/>
+- python &nbsp; Main.py &nbsp; --ip &nbsp; xx.xx.xx.xx(_IPAddress_)&nbsp;  -location &nbsp; -csv&nbsp; _csvfilepath_<br/>
+- python &nbsp; Main.py &nbsp; --ip &nbsp; xx.xx.xx.xx(_IPAddress_)&nbsp;  -location -view <br/>
+- python &nbsp; Main.py &nbsp; --ip &nbsp; xx.xx.xx.xx(_IPAddress_)&nbsp;  -view <br/>
+
+**Domain Reputation Check**<br/>
+- python &nbsp; Main.py &nbsp; --domain &nbsp; _domain name_&nbsp;  -ibm<br/>
+- python &nbsp; Main.py &nbsp; --domain &nbsp; _domain name_&nbsp;  -ibm &nbsp; -csv&nbsp; _csvfilepath_<br/>
+- python &nbsp; Main.py &nbsp; --domain &nbsp; _domain name_&nbsp;  -talos<br/>
+- python &nbsp; Main.py &nbsp; --domain &nbsp; _domain name_&nbsp;  -talos &nbsp; -csv&nbsp; _csvfilepath_<br/>
+
+**Url Reputation Check**<br/>
+- python &nbsp; Main.py &nbsp; --url &nbsp; _url_&nbsp; -ibm<br/>
+- python &nbsp; Main.py &nbsp; --url &nbsp; _url_&nbsp; -ibm &nbsp; -csv&nbsp; _csvfilepath_<br/>
+- python &nbsp; Main.py &nbsp; --url &nbsp; _url_&nbsp; -talos<br/>
+- python &nbsp; Main.py &nbsp; --url &nbsp; _url_&nbsp; -talos &nbsp; -csv&nbsp; _csvfilepath_<br/>
+- python &nbsp; Main.py &nbsp; --url &nbsp; _url_&nbsp; -virustotal<br/>
+- python &nbsp; Main.py &nbsp; --url &nbsp; _url_&nbsp; -virustotal &nbsp; -csv&nbsp; _csvfilepath_<br/>
+
+**Hash Reputation Check**<br/>
+- python &nbsp; Main.py &nbsp; --hash &nbsp; _hash(md5/sha256/sha1)_&nbsp; -ibm<br/>
+- python &nbsp; Main.py &nbsp; --hash &nbsp; _hash(md5/sha256/sha1)_&nbsp; -ibm &nbsp; -csv&nbsp; _csvfilepath_<br/>
+- python &nbsp; Main.py &nbsp; --hash &nbsp; _hash(md5/sha256/sha1)_&nbsp; -virustotal<br/>
+- python &nbsp; Main.py &nbsp; --hash &nbsp; _hash(md5/sha256/sha1)_&nbsp; -virustotal &nbsp; -csv&nbsp; _csvfilepath_<br/>
+
+**FileScan**<br/>
+- python &nbsp; Main.py &nbsp; --filescan &nbsp; _filename_&nbsp; -virustotal<br/>
