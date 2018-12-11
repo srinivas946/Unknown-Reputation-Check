@@ -14,7 +14,6 @@ class UREngine:
         parse.add_argument('--url', nargs='?', const=1, help='Url')
         parse.add_argument('--hash', nargs='?', const=1, help='Hash Value (MD5/SHA256/SHA1)')
         parse.add_argument('--filescan', nargs='?', const=1, help='File Scan, for multiple filescan store the filepaths in one csv file')
-        parse.add_argument('--virus', nargs='?', const=1, help='Virus Check (Type of Virus and Risk)')
         parse.add_argument('-ibm', nargs='?', const=1, help='IBM X Force (IPAddress / Domains / Urls / Hashes (MD5, SHA256, SHA1))')
         parse.add_argument('-ipvoid', nargs='?', const=1, help='IPVoid (IPAddress)')
         parse.add_argument('-talos', nargs='?', const=1, help='Cisco Talos (IPAddress / Domains/ Urls) ')
