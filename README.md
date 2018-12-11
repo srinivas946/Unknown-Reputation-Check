@@ -56,3 +56,24 @@ Take an overview of commands available for this tool<br/>
 
 **FileScan**<br/>
 - python &nbsp; Main.py &nbsp; --filescan &nbsp; _filename_&nbsp; -virustotal<br/>
+
+### Requirements
+**IBM X Force**
+: IBM X Force Provides an API to get the Reputation details of IPAddress, Domains, Urls and Hashes. <br/>
+ - _Public API_:<br/>
+   - Login to IBM X Force and get the API KEY and API PASSWORD<br/>
+   - Add API KEY and API PASSWORD to Config text file<br/>
+   - Public API provides limit of 5000 API Calls per month<br/>
+- _Private API_:<br/>
+   - If you are interested to buy an API Key Login to IBM X Force and Contact the experts to know the Price and Limit of API KEY<br/>
+
+**VirusTotal**
+: VirusTotal Provides an API to get the Reputation details of Urls, Hashes and FileScan. <br/>
+ - _Public API_:<br/>
+   - Login to VirusTotal and get the API KEY<br/>
+   - Add API KEY to Config text file><br/>
+   - Public API provides 4 API Calls per minute<br/>
+ - _Private API_:<br/>
+   - If you are interested to buy an API KEY Login to VirusTotal and Contact the experts to know the price and Limit of API<br/>
+
+
