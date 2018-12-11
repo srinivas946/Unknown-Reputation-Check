@@ -1,0 +1,23 @@
+[IBM]
+api_key = ****  IBM API KEY PASTE HERE ****
+api_pass = **** IBM API PASSWORD PASTE HERE *****
+ip_api = https://api.xforce.ibmcloud.com/ipr/
+url_api = https://api.xforce.ibmcloud.com/url/
+hash_api = https://api.xforce.ibmcloud.com/malware/
+
+[IPVoid]
+url = http://www.ipvoid.com/ip-blacklist-check/
+
+[IPLocation]
+url = https://www.iplocation.net/
+map = https://www.google.co.in/maps/place/
+
+[VirusTotal]
+api_key = **** VIRUS TOTAL API KEY PASTE HERE ****
+url_api = https://www.virustotal.com/vtapi/v2/url/report
+hash_api = https://www.virustotal.com/vtapi/v2/file/report
+filescan_api = https://www.virustotal.com/vtapi/v2/file/scan
+
+[Talos]
+url = https://www.talosintelligence.com/reputation_center/lookup?search=
+selenium_driver = **** SELENIUM DRIVER PATH PASTE HERE ****
