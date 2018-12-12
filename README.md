@@ -75,5 +75,12 @@ Take an overview of commands available for this tool<br/>
    - Public API provides 4 API Calls per minute<br/>
  - _Private API_:<br/>
    - If you are interested to buy an API KEY Login to VirusTotal and Contact the experts to know the price and Limit of API<br/>
+   
+**CISCO Talos**
+: CISCO Talos doesn't provide any APIs but we can do we scrapping using Beautifulsoup.<br/>
+ - Selenium:<br/>
+   - Selenium is used for Automation testing. In our case we it is used to extract the webpage content (page source code)<br/>
+   - After getting page source code we will filter the required data<br/>
+   - download the selenium webdriver(only chrome drivers are supported) from google and give the path in Config.txt file
 
 
