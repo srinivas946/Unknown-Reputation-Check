@@ -71,7 +71,7 @@ Take an overview of commands available for this tool<br/>
 : VirusTotal Provides an API to get the Reputation details of Urls, Hashes and FileScan. <br/>
  - _Public API_:<br/>
    - Login to VirusTotal and get the API KEY<br/>
-   - Add API KEY to Config text file><br/>
+   - Add API KEY to Config text file<br/>
    - Public API provides 4 API Calls per minute<br/>
  - _Private API_:<br/>
    - If you are interested to buy an API KEY Login to VirusTotal and Contact the experts to know the price and Limit of API<br/>
